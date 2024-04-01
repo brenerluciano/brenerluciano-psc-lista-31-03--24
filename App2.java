@@ -1,11 +1,11 @@
 import java.util.Scanner;
-public class App2 {
+public class App {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
 
         int temperaturas = 12;
         int valordatemperatura = 0;
-        int valorfinal = 0;
+        double valorfinal = 0;
 
            
           
@@ -14,19 +14,20 @@ public class App2 {
             
             System.out.println("Digite a temperatura " + i + " (entre 4 e 10): ");
             valordatemperatura = scanner.nextInt();
-            valorfinal += valordatemperatura; 
+             
             
             if (valordatemperatura >=4 && valordatemperatura <=10){
+            valorfinal += valordatemperatura;     
             
             }else{
                 System.out.println("Valor invalido, tente novamente.");
-                return; 
+                i--;
             }
              }
-             int valor = valorfinal / 12;
+             double valor = valorfinal / temperaturas;
              
 
-             System.out.println("A média de hoje das temperaturas é : " + valor + " C ");
+             System.out.printf("A média de hoje das temperaturas é : " + String.format("%.1f", valor)  + " C° ");
 
-}}  
+}} 
 
